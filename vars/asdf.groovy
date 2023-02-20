@@ -1,5 +1,9 @@
 properties([parameters([string(defaultValue: 'test', description: 'test or verify', name: 'testType', trim: false)])])
 
+def call(String name = 'human') {
+  echo "Hello, ${name}."
+}
+
 node {
     checkout scm
     
